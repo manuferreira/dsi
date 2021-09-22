@@ -95,8 +95,8 @@ class _RandomWordsState extends State<RandomWords> {
             ),
             onDismissed: (direction) {
               setState(() {
-                _suggestions.removeAt(index);
                 _deleteItem(_suggestions[index]);
+                _suggestions.removeAt(index);
               });
               ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Removed')));
             },
